@@ -82,6 +82,9 @@ function discount(){
     }
 }
 
+document.getElementById("refresh").addEventListener("click", function() {
+    location.reload();
+  });
 
 
 
