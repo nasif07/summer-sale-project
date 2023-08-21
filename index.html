@@ -37,7 +37,7 @@
                 <div class="flex-1">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- kitchenware -->
-                        <div class="card bg-base-100">
+                        <div id="item-1" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -51,11 +51,11 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">K. Accessories</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">39.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-1">39.00</span> TK</p>
                             </div>
                         </div>
                         <!-- K. Accessories -->
-                        <div class="card bg-base-100">
+                        <div id="item-2" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod2.png" alt="" class="rounded-xl" />
                             </figure>
@@ -69,11 +69,11 @@
                                     <input type="radio" name="rating-21" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">K. Accessories</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">25.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-2">25.00</span> TK</p>
                             </div>
                         </div>
                         <!-- home cooker -->
-                        <div class="card bg-base-100">
+                        <div id="item-3" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -87,7 +87,7 @@
                                     <input type="radio" name="rating-22" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">Home Cooker</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">49.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-3">49.00</span> TK</p>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     <h1 class="text-black font-bold text-4xl pt-20 pb-8">Sportswear</h1>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                        <div class="card bg-base-100">
+                        <div id="item-4" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod4.png" alt="" class="rounded-xl" />
                             </figure>
@@ -112,11 +112,11 @@
                                     <input type="radio" name="rating-23" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">Sports Back Cap</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">49.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-4">49.00</span> TK</p>
                             </div>
                         </div>
                         <!-- jersey set -->
-                        <div class="card bg-base-100">
+                        <div id="item-5" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -130,11 +130,11 @@
                                     <input type="radio" name="rating-24" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">Full Jersey Set</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">69.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-5">69.00</span> TK</p>
                             </div>
                         </div>
                         <!-- sports cates -->
-                        <div class="card bg-base-100">
+                        <div id="item-6" class="card bg-base-100">
                             <figure class="px-10 py-10 items-center bg-[#1111110C] m-5">
                                 <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -148,7 +148,7 @@
                                     <input type="radio" name="rating-25" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title">Sports cates</h2>
-                                <p class="text-[#1111117F] font-normal text-xl">159.00 TK</p>
+                                <p class="text-[#1111117F] font-normal text-xl"><span id="price-6">159.00</span> TK</p>
                             </div>
                         </div>
                     </div>
@@ -159,14 +159,20 @@
                         
                         <div class="rounded-md w-80 h-36 bg-white">
                             <h1 class="text-2xl font-medium p-4">Have coupon?</h1>
-                            <input placeholder="Coupon code" class="h-14 rounded-md border-solid border-2 border-black-500 ml-2 pl-3" type="text">
-                            <button class="bg-[#E527B2] btn h-14 hover:text-black text-white w-24 rounded-md font-semibold text-xl">Apply</button>
+                            <input id="discount-input" placeholder="Coupon code" class="h-14 rounded-md border-solid border-2 border-black-500 ml-2 pl-3" type="text">
+                            <button disabled id="button-id" onclick="discount()" class="bg-[#E527B2] btn h-14 hover:text-black text-white w-24 rounded-md font-semibold text-xl">Apply</button>
                         </div>
                         <div class="rounded-md w-80 bg-white mt-4 p-5">
+                            <div id="item-entry">
+
+
+                            </div>
+
+
                             <hr>
-                            <h1 class="font-medium text-2xl p-2">Total price: <span></span></h1>
-                            <h1 class="font-medium text-2xl p-2">Discount: <span></span></h1>
-                            <h1 class="font-medium text-2xl p-2 pb-8">Total: <span></span></h1>
+                            <h1 class="font-medium text-2xl p-2">Total price: <span id="total-price">00</span> TK</h1>
+                            <h1 class="font-medium text-2xl p-2">Discount: <span id="discount-field">00</span> TK</h1>
+                            <h1 class="font-medium text-2xl p-2 pb-8">Total: <span id="final-amount">00</span> TK</h1>
                             <hr>
                             <div class="flex justify-center items-center">
                                 <button class="btn bg-[#E527B2] h-14 hover:text-black text-white rounded-md font-semibold text-xl m-auto w-52 mt-5">Make Purchase</button>
